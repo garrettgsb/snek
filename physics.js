@@ -41,8 +41,8 @@ function saveScore(score) {
 }
 
 function updateStats() {
-    const scores = JSON.parse(localStorage.getItem('scores'))
-    const averageScore = (scores && scores.reduce((a, b) => a + b) / scores.length) || 0;
+    const scores = JSON.parse(localStorage.getItem('scores')) || [0]
+    const averageScore = scores && scores.reduce((a, b) => a + b) / scores.length || 0;
     document.getElementById('average').innerHTML = Math.floor(averageScore);
     document.getElementById('best').innerHTML = Math.max(...scores) || 0;
 }

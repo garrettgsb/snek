@@ -42,7 +42,7 @@ function saveScore(score) {
 
 function updateStats() {
     const scores = JSON.parse(localStorage.getItem('scores'))
-    const averageScore = scores.reduce((a, b) => a + b) / scores.length;
+    const averageScore = (scores && scores.reduce((a, b) => a + b) / scores.length) || 0;
     document.getElementById('average').innerHTML = Math.floor(averageScore);
-    document.getElementById('best').innerHTML = Math.max(...scores);
+    document.getElementById('best').innerHTML = Math.max(...scores) || 0;
 }

@@ -41,8 +41,8 @@ function saveScore(score) {
 }
 
 function updateStats() {
-    // const scores = JSON.parse(localStorage.getItem('scores'))
-    // const averageScore = scores.reduce((a, b) => a + b) / scores.length;
-    // document.getElementById('average').innerHTML = Math.floor(averageScore);
-    // document.getElementById('best').innerHTML = Math.max(...scores);
+    const scores = JSON.parse(localStorage.getItem('scores'))
+    const averageScore = scores.reduce((a, b) => a + b) / scores.length;
+    document.getElementById('average').innerHTML = Math.floor(averageScore);
+    document.getElementById('best').innerHTML = Math.max(...scores);
 }

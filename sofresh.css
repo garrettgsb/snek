@@ -1,0 +1,52 @@
+html body {
+    background-color: #253025;
+    color: #2B2;
+    text-shadow: 0px 0px 6px #2F2;
+    font-family: Monaco, monospace;
+    font-weight: 100;
+}
+
+canvas {
+    box-shadow: 2px 2px 5px #000;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.v-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+}
+
+h1 {
+    font-size: 48px;
+    margin-top: 0px;
+    padding: 0px;
+    position: absolute;
+    transition: text-shadow 0.5s, color 0.5s, font-size 0.5s, margin-bottom 0.5s;
+}
+
+.change {
+    color: #CFC;
+    font-size: 56px;
+    text-shadow: 0px 0px 15px #fff;
+    transition: text-shadow 1s, color 1s, font-size 0.5s, margin-bottom 0.5s;   
+}
+
+.score-babysitter {
+    font-size: 60px;
+    padding: 30px;
+    margin: 0;
+}
+
+.stat {
+    display: inline-flex;
+}
+
+.content {
+    justify-content: space-around;
+}

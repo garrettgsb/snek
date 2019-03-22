@@ -21,11 +21,14 @@ let reset = true;
 
 function goSnekGo() {
     console.log("Go snek u can do it! 🐍")
-    setupEventListeners();
-	setInterval(() => {
+    const gameLoop = () => {
 		processPendingInput();
-		reset = doPhysics(reset);
-    }, 10);
+        reset = doPhysics(reset);
+        const interval = snek.robotMode ? 10 : 50;
+        setTimeout(gameLoop, interval);
+    }
+    setupEventListeners();
+	setTimeout(gameLoop, 10);
     
     setInterval(() => {
         renderFrame();
